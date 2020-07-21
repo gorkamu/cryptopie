@@ -115,7 +115,6 @@ def decrypt(args, _file = None):
 		path_traverse(args)
 
 
-
 def path_traverse(args):
 	for item in os.listdir(args.path):
 		_file = args.path + item
