@@ -130,9 +130,28 @@ def path_traverse(args):
 
 
 
+def get_files(args):
+	files = []
+	for r, d, f in os.walk(args.path):
+	    for file in f:
+	    	fi = os.path.join(r, file)
+	    	if os.path.isfile(fi) and file != '.DS_Store':
+	        	files.append(fi)	            
+
+	for f in files:
+	    print(f)
+
+
+
 def main():
-	banner()
-	perform(arg_parser())
+	#banner()
+	#perform(arg_parser())
+
+	args = arg_parser()
+	if os.path.isfile(args.path):
+		perform(args)
+	else:	
+		get_files(args)
 
 
 if __name__ == '__main__':
