@@ -42,7 +42,7 @@ If you want to encrypt a file or a directory structure just type the command:
 python cryptopie.py -p PATH -e -a SHA256
 ```
 
-The -a argument is optional and it indicates the algorithm to be used. If you don't specify it it will be used the SHA256 algorithms by default
+The -a argument is optional and it indicates the algorithm to be used. If you don't specify it, it will be used the SHA256 algorithm by default
 
 Once you have encrypted a file/directory if you want to decrypt it just have to type the following command:
 ```
@@ -54,8 +54,7 @@ python cryptopie.py -p PATH -d -k ENCRYPTION_KEY
 - SHA256
 - SHA384
 - SHA512
-- SHA
-- 512_224
+- SHA512_224
 - SHA512_256
 - BLAKE2b
 - BLAKE2s
